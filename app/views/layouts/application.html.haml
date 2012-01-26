@@ -1,0 +1,11 @@
+!!! 5
+%html
+  %head
+    %title Rext
+    =javascript_include_tag "/ext-4.0.7-gpl/ext-all-dev.js"
+    =stylesheet_link_tag    "/ext-4.0.7-gpl/resources/css/ext-all.css"
+
+    =stylesheet_link_tag    "application"
+    =javascript_include_tag "application"
+    =csrf_meta_tags
+  %body=yield

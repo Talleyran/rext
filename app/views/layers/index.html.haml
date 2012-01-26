@@ -1,0 +1,15 @@
+%h1 Listing layers
+#grid
+%table
+  %tr
+    %th Id
+    %th Name
+  -@layers.each do |layer|
+    %tr
+      %td=layer.id
+      %td=layer.name
+      %td=link_to 'Show', layer
+      %td=link_to 'Edit', edit_layer_path(layer)
+      %td=link_to 'Destroy', layer, confirm: 'Are you sure?', method: :delete
+
+=link_to 'New Layer', new_layer_path
